@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="menuBox">
+        <ul class="menu">
+            <li class="menuItem">
+                <a>Menu 1</a>
+                <ul class="subMenu menu">
+                    <li class="subMenuItem menuItem">sub 1</li>
+                    <li class="subMenuItem menuItem">sub 2</li>
+                    <li class="subMenuItem lastSubMenu menuItem">sub 3</li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a>Menu 2</a>
+                <ul class="subMenu menu">
+                    <li class="subMenuItem menuItem">sub 1</li>
+                    <li class="subMenuItem menuItem">sub 2</li>
+                    <li class="subMenuItem lastSubMenu menuItem">sub 3</li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a>Menu 3</a>
+                <ul class="subMenu menu">
+                    <li class="subMenuItem menuItem">sub 1</li>
+                    <li class="subMenuItem menuItem">sub 2</li>
+                    <li class="subMenuItem lastSubMenu menuItem">sub 3</li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a>Menu 4</a>
+                <ul class="subMenu menu">
+                    <li class="subMenuItem menuItem">sub 1</li>
+                    <li class="subMenuItem menuItem">sub 2</li>
+                    <li class="subMenuItem lastSubMenu menuItem">sub 3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="hamburgerMenu">
+        <ul class="menu">
+            <label for="toggle" class="hamburger"> &#9776;</label>
+            <input type=checkbox id=toggle />
+            
+            <div id="mobileMenu">
+                    <li> <label for="menu1"> menu 1
+                        <input type="checkbox" id=menu1 /></label>
+                        <ul id=menu11>
+                            <li>sub1</li>
+                        </ul>
+                    </li>
+                
+                <li>menu 2
+                       <ul>
+                           <li>nr1</li>
+                       </ul>
+                </li>
+                <li>menu 3</li>
+                <li>menu 4</li>
+            </div>
+        </ul>
+    </div>
+   
+<script src="script.js"></script>
+</body>
+
+</html>

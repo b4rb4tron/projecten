@@ -1,0 +1,128 @@
+body, html {
+  font-family: Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  /*background: url(http://1.bp.blogspot.com/-58EWiFWVjak/UMAvWe_ynPI/AAAAAAAAOi0/vVPSAWR-NTk/s1600/Green+Nature+Wallpapers+03.jpg);
+  */background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+background-color: aquamarine;
+}
+@media all and (max-width: 820px){
+  .menuBox {
+    visibility: hidden;
+  }
+  
+}
+@media all and (min-width: 821px){
+  #hamburgerMenu {
+    visibility: hidden;
+  }
+}
+.menuBox {
+    width: 100%;
+    background-color: black;
+    height: 65px;
+    position: fixed;
+    top: 0px;
+}
+.menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.menuItem {
+  color: antiquewhite;
+  float: left;
+  width: 200px;
+  height: 65px;
+  background-color: black;
+  line-height: 65px;
+  text-align: center;
+}
+.menuItem:hover{
+  background-color:  rgb(105, 75, 35);
+  display: block;
+}
+.subMenuItem{
+  display: none; 
+}
+.subMenuItem:hover {
+  background-color: rgb(105, 75, 35);
+}
+.menuItem:hover .subMenuItem {
+  display: block;
+}
+.lastSubMenu {
+  border-radius: 0px 0px 10px 10px;
+}
+.hamburger{
+
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 40px;
+  cursor: pointer;
+}
+#toggle:checked + #mobileMenu li{
+ display: block;
+}
+#toggle:checked + #mobileMenu li ul li{
+  display: block;
+ }
+ #toggle:on body{
+  background-color: aliceblue;
+ }
+#mobileMenu li{
+  position: relative;
+  top: 65px;
+  display: none;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-color: black;
+  border-width: 4px;
+  border-bottom-style: solid;
+}
+#mobileMenu li:hover {
+  transition: border-color 0.5s;
+  border-bottom-style: solid; 
+  border-color: brown;
+}
+#toggle {
+  display: none;
+}
+#hamburgerMenu {
+  
+  width: 100%;
+  background-color: black;
+  height: 65px;
+  position: fixed;
+  top: 0px;
+}
+#text{
+  position: relative;
+  top:65px;
+  width: 80%;
+  float: right;
+  margin-right: 10%;
+ background-color: #fff5;
+ color: black;
+ z-index: -1;
+}
+#menu1:checked + #mobileMenu{
+  color: grey;
+ }

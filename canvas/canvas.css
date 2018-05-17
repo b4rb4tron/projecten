@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+.container {
+    line-height: 0px;
+    
+  }
+  canvas{
+      margin: 2%;
+      background: grey;
+  }
