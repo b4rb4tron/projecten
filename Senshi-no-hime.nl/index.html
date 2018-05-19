@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no  "
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Senshi-no-hime</title>
     <link rel="stylesheet" type="text/css" href="./css/roboto.css">
@@ -13,38 +14,54 @@
     <script src="./scripts/main.js"></script>
 </head>
 
-<body>
+<!-- Top menu -->
+
+<body id="boven">
     <nav>
         <ul class="mainMenu">
             <li>
-                <a>Home</a>
+                <a onclick="topScroll()">Home</a>
             </li>
             <li>
-                <a>Nieuws</a>
+                <a href="#nieuws">Nieuws</a>
             </li>
             <li>
-                <a>Foto's</a>
+                <a href="#fotos">Foto's</a>
+            </li>
+            <li>
+                <a href="#overons">Over ons</a>
+            </li>
+            <li>
+                <a onclick="bottomScroll()">Contact</a>
             </li>
         </ul>
     </nav>
 
+    <!-- side menu -->
 
     <div class="ham" id=ham>
         <a onclick="size()">
-            &#9776
+            <img src="./images/icons/Hamburger.png" alt="Menu" width="40px" height="40px">
         </a>
     </div>
 
     <div id=slideMenu class="slideMenu">
         <a onclick="reset()">
-            <span id=close>&#9932</span>
+            <span id=close>
+                <img src="./images/icons/close.png" alt="close" width="40px" height="40px">
+            </span>
         </a>
         <div class="menu2">
-            <a>Home</a>
+            <a onclick="topScroll()">Home</a>
             <a>Nieuws</a>
             <a>Foto's</a>
+            <a>Over ons</a>
+            <a onclick="bottomScroll()">Contact</a>
         </div>
     </div>
+
+    <!-- Content -->
+
     <div class="bg1" id="bg1">
         <div id="main">
             <h1>Senshi no hime
@@ -53,20 +70,38 @@
             </h1>
         </div>
     </div>
-    <div class="spacer">
+    <div>
+        <div class="block">
+            <h2>Even voorstellen</h2>
+            <p>Ik ben Ruth, ik woon samen met Roger in Scheemda, een dorp in de provincie Groningen. We hebben een hele verzameling
+                dieren om ons heen wonen waaronder geiten, konijnen en kippen. Oki is onze eerste Shiba inu. We willen graag
+                een nestje met haar volgens de regels van de rasvereniging. De gezondheidstesten en shows zijn gedaan. Hopelijk
+                kunnen we binnen een half jaar het eerste nestje pups verwelkomen.
+                <br>
+                <br> Oki is een rustig en happy go lucky teefje. Ze is dikke vriendjes met kater Yolo. Ook kan ze het redelijk
+                vinden met onze andere kater. Ze vind het leuk om de kippen, konijnen en geitjes te klieren. Het jongste
+                geitje Ulan vind het ook heel leuk om Oki uit te dagen. Verder heeft Oki vele honden vriendjes. Ze heeft
+                een voorkeur voor grote stoere hondjes maar haar bejaarde Jack Russel vriendje Koen is haar ook heel dierbaar.</p>
+        </div>
 
     </div>
     <div id=bg3 class="bg3"> </div>
-    <div class="spacer"></div>
+    <div class="spacer" id=test></div>
 
     <div id=bg2 class="bg2"></div>
     <div class="spacer"></div>
     <div id=bg4 class="bg4"> </div>
-    <div class="footer">
-        copyleft: Roger van Hout 2018 | find me on 
-        <a href="http://github.com/b4rb4tron" target="_blank"  >Github
-        </a>/ <a href="http://codepen.io/b4rb4tron" target="_blank"> Codepen</a> 
-        | or mail <a href="mailto: roger@snoeivanhout.nl">me</a> 
+
+
+    <!-- footer -->
+
+    <div id=footer class="footer">
+        copyleft: Roger van Hout 2018 | find me on
+        <a href="http://github.com/b4rb4tron" target="_blank">Github
+        </a>/
+        <a href="http://codepen.io/b4rb4tron" target="_blank"> Codepen</a>
+        | or mail
+        <a href="mailto: roger@snoeivanhout.nl">me</a>
     </div>
 </body>
 

@@ -51,40 +51,44 @@ nav {
   top: 0px;
   font-family: Roboto;
   font-weight: normal;
-  color: #111;
+  color: #fff;
   width: 100%;
-  background: linear-gradient(to bottom, #fff, #fff);
-  border-bottom-color: #111;
-  border-bottom-style: solid;
+  background: url("../images/icons/menubarsmall_dun.png");
+  background-repeat: repeat-x;
+  background-size: 60px 60px;
+  height: 60px;
 }
 ul {
   list-style: none;
   margin: 0px;
 }
 .mainMenu li {
-  margin: 5px 1px 5px 1px;
+  margin: 10px 5px 10px 5px;
   list-style: none;
   float: left;
 }
 .mainMenu li a {
-  border-left-style: solid;
-  border-right-style: solid;
+  box-shadow: #151515 0px 0px 4px 0px;
+  text-decoration: none;
+  color: #ddd;
   padding: 10px 15px 10px 15px;
   display: block;
   transition: 0.3s;
+  border-color: #333;
+  border-radius: 5px;
+  
+  background-color: #27272700;
+  opacity: .8;
 }
 .mainMenu li a:hover {
   color: #fff;
-  background-color: #333;
+  background-color: #444;
 }
 .ham {
   z-index: 2;
   text-align: center;
-  border-style: solid;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border-width: 3px;
+  width: 40px;
+  height: 40px;
   font-size: 2em;
   position: fixed;
   left: 5px;
@@ -105,9 +109,9 @@ ul {
 .slideMenu {
   position: fixed;
   top: 0px;
-  left: -400px;
+  left: -300px;
   height: 100%;
-  width: 400px;
+  width: 300px;
   background-color: #111;
   opacity: 0.7;
   transition: 0.5s;
@@ -119,11 +123,8 @@ ul {
   margin: 5px;
   margin-right: 10px;
   text-align: center;
-  border-style: solid;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border-width: 3px;
+  width: 40px;
+  height: 40px;
   font-size: 1.9em;
   transition: 0.5s;
 }
@@ -139,8 +140,8 @@ ul {
 .menu2 a {
   margin: 0em 10px 0px 10px;
   display: block;
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   text-align: center;
   border-color: #0000;
   border-width: 0px 10px 0px 10px;
@@ -167,13 +168,15 @@ ul {
   background-attachment: fixed;
   background-size: cover;
   margin-top: -25px;
-  background-position-y: -200px;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-position: 0px -200px
 }
 .bg2 {
   background: url(../images/oki/2017-14-04-0001.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -50px;
   height: 200px;
 }
 .bg3 {
@@ -181,7 +184,7 @@ ul {
   background-attachment: fixed;
   background-size: cover;
   height: 400px;
-  background-position-y: -200px;
+  background-position: center -200px;
   background-repeat: no-repeat;
 }
 .bg4 {
@@ -189,17 +192,33 @@ ul {
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
-  background-position-y: -200px;
+  background-position: center -10px;
   background-repeat: no-repeat;
 }
 .footer{
     padding-left: 50px;
-    line-height: 70px;
+    line-height: 40px;
     border-top-color: #111;
     border-top-style: solid;
-    height: 70px;
+    height: 40px;
 }
 .footer a{
     text-decoration: none;
-    color: #664;
+    color: #662;
+}
+.center{
+  overflow: hidden;
+
+  width: 80%;
+  height: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.block{
+    padding: 20px;
+}
+p{
+  font-family: Roboto;
+  font-weight: 100;
 }
