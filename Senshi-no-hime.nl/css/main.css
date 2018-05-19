@@ -1,4 +1,19 @@
 @media all and (min-width: 800px) {
+  
+.siema1, .siema2{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+  .left{
+    margin-bottom: 20px;
+    }
+    .right{
+    margin-bottom: 20px;
+    }
+  .block{
+    width: 60%;
+  }
   #main {
     position: relative;
     top: 30px;
@@ -17,6 +32,17 @@
 }
 
 @media all and (max-width: 800px) {
+.right, .left{
+  margin-bottom: 10px;
+}
+  
+.siema1 .siema2{
+  width: 100%;
+  margin-top: 5px;
+ }
+  .block{
+    width: 90%;
+  }
   #main h1 {
     position: relative;
     top: 320px;
@@ -57,6 +83,7 @@ nav {
   background-repeat: repeat-x;
   background-size: 60px 60px;
   height: 60px;
+  box-shadow: #111 0pc 0px 20px 0px;
 }
 ul {
   list-style: none;
@@ -85,6 +112,8 @@ ul {
   background-color: #444;
 }
 .ham {
+  border-radius: 50%;
+  box-shadow: #444 0px 0px 7px 0px;
   z-index: 2;
   text-align: center;
   width: 40px;
@@ -196,7 +225,8 @@ ul {
   background-repeat: no-repeat;
 }
 .footer{
-    padding-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     line-height: 40px;
     border-top-color: #111;
     border-top-style: solid;
@@ -206,19 +236,54 @@ ul {
     text-decoration: none;
     color: #662;
 }
-.center{
-  overflow: hidden;
 
-  width: 80%;
-  height: 95%;
-  margin-left: auto;
-  margin-right: auto;
-
-}
 .block{
-    padding: 20px;
-}
+  
+   
+    margin-left: auto;
+    margin-right: auto;
+  }
 p{
   font-family: Roboto;
   font-weight: 100;
+}
+
+#naam{
+  border:  #222 2px dotted ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  width:100%;
+}
+#email{
+  border:  #222 2px  dotted ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  width:100%;
+}
+#bericht{
+  border: #222 2px dotted; 
+  width:100%;
+}
+#verzenden, button{
+  border-radius: 5px;
+  background-color: #ccc;
+  border: #222 none;
+ padding: 15px;
+  margin-top: 1em;
+}
+#verzenden:hover , button:hover{
+  background-color: #bbb;
+}
+.fotos{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  box-shadow: #222 0px 0px 50px -10px;
+}
+.siema2  h3{
+  margin-left: 10%;
+  margin-bottom: -2%;
 }
