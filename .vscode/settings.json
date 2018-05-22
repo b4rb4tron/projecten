@@ -1,2 +1,14 @@
 {
+    "editor.fontSize": 12,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/README.md": true,
+        "**/.vscode": true,
+        "**/projecten.code-workspace": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    }
 }

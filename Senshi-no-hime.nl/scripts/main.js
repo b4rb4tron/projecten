@@ -112,8 +112,7 @@ setTimeout(function(){
 
 var myFotos = new Siema({
   selector: '.siema2',  
-  onInit: function(){},
-   onChange: function(){}
+   loop: 1
  });
  
  var prevF = document.getElementById("fotoLeft");
