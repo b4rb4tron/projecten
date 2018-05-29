@@ -97,11 +97,12 @@ function positions() {
       ids.getBoundingClientRect().y >
         midY - 40 + wrapper.getBoundingClientRect().y
     ) {
-      ids.style.transition = "transform .2s";
+      //ids.style.transition = "transform .2s";
       ids.style.transformOrigin = "20% 50%";
       ids.style.transform = "scale(1.1, 1.1)";
       ids.style.lineHeight = "1.1em";
       ids.style.color = "#ccc";
+      ids.className += "text"; 
       if (
         ids.getBoundingClientRect().y <
           midY + 20 + wrapper.getBoundingClientRect().y &&
