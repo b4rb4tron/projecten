@@ -1,8 +1,7 @@
 
 <?php 
-$home = opendir("./");
+$home = opendir("./jpg");
 while (  ( $list = readdir($home)) !== FALSE   ){
-    header('Content-Type: application/json');
 echo ($list)." ";
 }
 ?>
