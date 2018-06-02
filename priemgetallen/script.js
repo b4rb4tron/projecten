@@ -1,8 +1,8 @@
 console.clear();
-let i = 279689;
+let i = 1;
 let o = i;
 let total;
-let teller = 24412;
+let teller = 1;
 function primes() {
   let j = 0;
   for (let g = 2; g < i; g++) {
