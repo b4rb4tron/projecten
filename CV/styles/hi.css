@@ -1,0 +1,49 @@
+@media screen and (min-width: 700px) {
+  #side {
+    margin-top: 150px;
+    margin-left: -10px; } }
+@media screen and (max-width: 700px) {
+  #side {
+    margin-top: 70px;
+    margin-left: -5px; } }
+#intro {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
+  #intro #heart {
+    color: orange; }
+  #intro #side {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    -moz-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -moz-transform: rotate(90.5deg);
+    -ms-transform: rotate(90.5deg);
+    -webkit-transform: rotate(90.5deg);
+    transform: rotate(90.5deg); }
+  #intro #script {
+    display: block;
+    text-align: center;
+    position: relative;
+    color: black;
+    margin-top: 30px; }
+  #intro #visuals {
+    display: block;
+    text-align: right;
+    width: 90%;
+    margin-top: calc(-30% - 70px);
+    font-size: 1.1em; }
+  #intro #html {
+    display: block;
+    text-align: left;
+    width: 70%;
+    font-size: 1.2em; }
+  #intro #experience {
+    display: block;
+    margin-top: 50px;
+    text-align: center; }

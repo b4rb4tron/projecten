@@ -92,9 +92,10 @@ setTimeout(function(){
 //caroussel nieuws
 
  var mySiema = new Siema({
-  selector: '.siema1',
+  selector: '.Siema1',
    onInit: function(){},
-   onChange: function(){}
+   onChange: function(){},
+   draggable: false
  });
  
  var prev = document.querySelector('.prev');
@@ -108,19 +109,52 @@ setTimeout(function(){
  });
 
  
-//caroussel foto's
+ //fotoslider:
 
-var myFotos = new Siema({
-  selector: '.siema2',  
-   loop: 1
- });
- 
- var prevF = document.getElementById("fotoLeft");
- var nextF = document.getElementById("fotoRight");
- 
- prevF.addEventListener('click', function () {
-   return myFotos.prev();
- });
- nextF.addEventListener('click', function () {
-   return myFotos.next();
- });
+ /*-------------------
+------Globals-------
+------------------*/
+var response = [];
+var request = new XMLHttpRequest();
+let dir = [];
+/*-------------------
+----AJAX request-----
+------------------*/
+request.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    response = this.responseText.split(`+++`);
+    /*-------------------
+    --create pic list---
+    ------------------*/
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].charAt(0) !== "." && response[i].charAt(1) !== "." && response[i].charAt(0) !== "" ) {
+        dir.push({title: response[i], id: response[i].slice(0,  response[i].indexOf(`.`))    });
+      }
+    }
+    for(let i = 0; i < dir.length; i++){
+      document.querySelector(".Siema2").innerHTML += `
+      <div> 
+      <h3>${dir[i].id} </h3>
+      <img class="fotos" src="./images/slider/${dir[i].title}" alt="${dir[i].title}" width="80%"  >
+      </div> `;
+    }
+  
+    /*-------------------
+    --Create slidshow----
+    ------------------*/
+    var Siema2 = new Siema({
+      selector: `.Siema2`,
+    
+      duration: 500,
+      loop: true
+    });
+    /*-------------------
+    ------Buttonss-------
+    ------------------*/
+    document.getElementById('fotoLeft').addEventListener('click', function() {Siema2.prev();});
+    document.getElementById('fotoRight').addEventListener('click', function() {Siema2.next();});
+  }
+};
+request.open("GET", "./scripts/fotos.php", (async = true));
+request.send();
+

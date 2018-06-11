@@ -1,6 +1,6 @@
 
 <?php 
-$home = opendir("./jpg");
+$home = opendir("../nieuws");
 while (  ( $list = readdir($home)) !== FALSE   ){
 echo ($list)." ";
 }

@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="./styles/contact.css">
+<link href="styles/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="./images/c.png" type="image/png">
+<h1>Contact</h1>
+
+<div class="block" id=contact>
+
+
+
+    <div style="margin: 20px;">
+        <form method="post" target="_blank" onsubmit="
+            tg = (target) => document.getElementById(target);
+            tg(`submit`).disabled= true;
+            tg(`submit`).innerHTML= `please wait`;
+            let formdata = new FormData();
+            formdata.append(`naam`, tg(`naam`).value );
+            formdata.append(`email`, tg(`email`).value );
+            formdata.append(`bericht`, tg(`bericht`).value ); 
+            let send = new XMLHttpRequest();
+            send.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    tg(`submit`).innerHTML= `thank you`;
+                    
+                
+                }
+              };
+              send.open(`POST`, `scripts/mail.php`);
+              send.send(formdata);
+              return false;
+                ">
+            <h3>Naam</h3>
+            <input type="text" name="naam" id="naam" required />
+
+            <div>
+                <h3>Email</h3>
+                <input name="email" type="email" id="email" required/>
+
+            </div>
+
+
+            <div>
+                <h3>Bericht</h3>
+                <textarea name="bericht" rows="10" id=bericht required></textarea>
+
+            </div>
+
+
+            <div>
+                <button type="submit" name="submit" id=submit>Send</button>
+            </div>
+        </form>
+    </div>
+</div>

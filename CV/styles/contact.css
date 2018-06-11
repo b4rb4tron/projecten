@@ -1,0 +1,39 @@
+
+.block{
+  
+   
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#naam{
+  border:  #222 2px dotted ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  width:100%;
+}
+#email{
+  border:  #222 2px  dotted ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  width:100%;
+}
+#bericht{
+  border: #222 2px dotted; 
+  width:100%;
+}
+#verzenden, button{
+  border-radius: 5px;
+  background-color: #ccc;
+  border: #222 none;
+ padding: 15px;
+  margin-top: 1em;
+}
+#verzenden:hover , button:hover{
+  background-color: #bbb;
+}
+input, textarea{
+  outline: none;
+}
