@@ -6,13 +6,19 @@
         #side{
             margin-top: 150px;
             margin-left: -10px;
+            @include transform-origin(bottom, right);
+            @include transform(rotate(90.5deg));
+
         }
 }
 
 @media screen and(max-width: 700px){
     #side{
-        margin-top: 70px;
-        margin-left: -5px;
+        visibility: hidden;
+        margin-top: 10px;
+        margin-left: 0px;
+        @include transform-origin(bottom, right);
+        @include transform(rotate(0.5deg));
     }
 }
 #intro{
@@ -30,10 +36,9 @@
 
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 100%; 
     text-align: right;
-    @include transform-origin(bottom, right);
-    @include transform(rotate(90.5deg));
+
     
 }
 #script{

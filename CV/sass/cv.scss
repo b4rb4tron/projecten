@@ -1,0 +1,342 @@
+$photoshop:#E8C27A;
+$illustrator: #FFFC22;
+$indesign: #55FF71;
+$office: #F662FF;
+
+
+@import "compass/css3";
+@import "vars";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&subset=latin-ext");
+
+p{
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+#grid{
+    display: grid;
+    align-content: start;
+    justify-content: space-between;
+    
+}
+
+@media all and (min-width: 800px){
+    #grid{
+    grid-template-columns: 20% 10% 20% 20% 30%;
+   
+    grid-template-areas:
+      "naw naw naw  qualities    me"
+      "spraak spraak  timeline timeline timeline"
+      "os  os timeline timeline timeline"
+      " vervoer  vervoer timeline timeline timeline"
+      "hobbies  hobbies timeline timeline timeline"
+      "programming programming timeline timeline timeline"
+      "software software  timeline timeline timeline"
+      ". . timeline timeline timeline";
+    }
+    #me {
+        vertical-align: middle;
+        img{
+            float: right;
+            vertical-align: middle;
+        }
+        
+    }
+}
+@media all and (min-width: 550px) and (max-width: 800px){
+    #grid{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+          "naw naw naw me"
+          "qualities qualities . os"
+          "hobbies hobbies hobbies vervoer"
+          "spraak spraak spraak spraak"
+          "programming programming programming programming"
+          "software software software software"
+          "timeline timeline timeline timeline";
+        }
+        #me {
+            vertical-align: middle;
+            img{
+                float: right;
+                vertical-align: middle;
+            }
+            
+        }
+}
+@media all and (max-width: 550px){
+    #grid{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+          "me me me me"
+          "naw naw naw naw"
+          "qualities qualities qualities qualities" 
+          "spraak spraak spraak spraak"
+          "hobbies hobbies hobbies hobbies"
+          "os os os os" 
+          "vervoer vervoer vervoer vervoer"
+          "programming programming programming programming"
+          "software software software software"
+          "timeline timeline timeline timeline";
+        }
+        #me {
+            text-align: center;
+            img{
+                //float: right;
+                vertical-align: middle;
+            }
+            
+        }
+}
+//#vervoer, #naw, #hobbies, #os, #me, #software, #spraak, #qualities, #programming, #timeline {
+//    border-style: solid;
+//}
+#vervoer{
+    grid-area: vervoer;
+}
+#naw{
+    grid-area: naw;
+}
+#hobbies{
+    grid-area: hobbies;
+}
+#os{
+    grid-area: os;
+}
+#me{
+    grid-area: me;
+}
+#software{
+    grid-area: software;
+}
+#programming{
+    grid-area: programming;
+}
+#spraak{
+    grid-area: spraak;
+}
+#qualities{
+    grid-area: qualities;
+    div{
+        font-weight: 200;
+        line-height: 1.3em;
+    }
+}
+#timeline{
+    grid-area: timeline;
+    //padding-left: 20px;
+    //padding-right: 20px;
+    p{
+        font-weight: 200;
+        line-height: 1em;
+    }
+}
+.progressback{
+    display: block;
+    box-sizing: content-box;
+        width: 100%;
+        height: 20px;
+        line-height: 22px;
+        background-color: #eee;
+        border-radius: 12px;
+        border-style: hidden;
+        border-color: #222;
+        border-width: 2px;
+}
+#photoshop{
+    @extend .progressback;
+    box-sizing: border-box;
+    width: 90%;
+    background: repeating-linear-gradient(
+  45deg,
+  $photoshop,
+  $photoshop 20px,
+ darken($photoshop, 10%) 20px,
+ darken($photoshop, 10%) 40px
+);
+    text-align: center;
+    border-style:hidden;
+}
+#illustrator{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        $illustrator,
+        $illustrator 20px,
+       darken($illustrator, 10%) 20px,
+       darken($illustrator, 10%) 40px
+      );
+
+    width: 60%;
+}
+#indesign{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+  45deg,
+  $indesign,
+  $indesign 20px,
+ darken($indesign, 20%) 20px,
+ darken($indesign, 20%) 40px
+);
+
+    width: 75%;
+}
+#office{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        $office,
+        $office 20px,
+       darken($office, 15%) 20px,
+       darken($office, 15%) 40px
+      );
+    width: 85%;
+}
+
+#html{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        #FF7D27,
+        #FF7D27 20px,
+       darken(#FF7D27, 15%) 20px,
+       darken(#FF7D27, 15%) 40px
+      );
+    width: 80%;
+}
+#css{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        #E8C507,
+        #E8C507 20px,
+       darken(#E8C507, 15%) 20px,
+       darken(#E8C507, 15%) 40px
+      );
+    width: 70%;
+}
+#php{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        #70FF4D,
+        #70FF4D 20px,
+       darken(#70FF4D, 20%) 20px,
+       darken(#70FF4D, 20%) 40px
+      );
+    width: 15%;
+}
+#javascript{
+    @extend #photoshop;
+    background: repeating-linear-gradient(
+        45deg,
+        #3AE8DC,
+        #3AE8DC 20px,
+       darken(#3AE8DC, 15%) 20px,
+       darken(#3AE8DC, 15%) 40px
+      );
+    width: 60%;
+}
+
+/*
+Timeline                
+*/
+ .container {
+    width: 105%;
+    padding: 10px 0;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+    h3{
+        margin-bottom: 5px;
+        margin-top: 5px;
+        line-height: 5px;
+    }
+    p{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    
+        font-size: .9em;
+    }
+ }
+ 
+ .container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+    width: 4px;
+    height: 100%;
+    background: $menuColor;
+    z-index: -1
+ }
+ 
+ .timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+ }
+ 
+ .work {
+    float: right;
+    margin-right: 4px;
+    h3, span{
+        color: lighten($bgc, 15%);
+    }
+ }
+ #amp{
+     color: $menuColor;
+ }
+ #timelineTitle{
+     text-align: center;
+ }
+ .education {
+    float: left;
+    direction: rtl;
+    margin-left: 4px;
+    h3, span{
+        color: $sideMenu;
+    }
+ }
+ 
+ .marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 4px solid $menuColor;
+    background: $navColor;
+    margin-top: 10px;
+    z-index: 9
+ }
+ 
+ .timeline-content{
+     margin-top: -18px;
+     margin-left: 30px;
+     margin-right: 30px;
+ }
+ @media screen and (max-width: 1000px) {
+    .container:before {
+       left: 14px;
+       width: 4px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    .work {
+       float: none;
+       margin-right: 0px;
+       margin-left: 2px;
+    }
+ 
+    .education {
+       float: none;
+       direction: ltr;
+       margin-left: 2px;  
+    }
+    #timelineTitle{
+        text-align: left;
+    }
+ }
+ 

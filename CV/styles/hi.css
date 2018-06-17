@@ -1,11 +1,28 @@
 @media screen and (min-width: 700px) {
   #side {
     margin-top: 150px;
-    margin-left: -10px; } }
+    margin-left: -10px;
+    -moz-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -moz-transform: rotate(90.5deg);
+    -ms-transform: rotate(90.5deg);
+    -webkit-transform: rotate(90.5deg);
+    transform: rotate(90.5deg); } }
 @media screen and (max-width: 700px) {
   #side {
-    margin-top: 70px;
-    margin-left: -5px; } }
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: 0px;
+    -moz-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -moz-transform: rotate(0.5deg);
+    -ms-transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+    transform: rotate(0.5deg); } }
 #intro {
   width: 80%;
   margin-left: auto;
@@ -17,15 +34,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    text-align: right;
-    -moz-transform-origin: bottom right;
-    -ms-transform-origin: bottom right;
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -moz-transform: rotate(90.5deg);
-    -ms-transform: rotate(90.5deg);
-    -webkit-transform: rotate(90.5deg);
-    transform: rotate(90.5deg); }
+    text-align: right; }
   #intro #script {
     display: block;
     text-align: center;

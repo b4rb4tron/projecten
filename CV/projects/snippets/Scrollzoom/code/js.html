@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snippets</title>
+    <link rel="shortcut icon" href="../../../../images/p.png" type="image/png">
+    <link rel="stylesheet" href="../../../../styles/screen.css">
+    <link rel="stylesheet" type="text/css" href="../../../snippets.css">
+    <link rel="stylesheet" href="../../../hightlight.min.css">
+    <script src="../../../highlight.min.js"></script>
+</head>
+
+<body>
+    <div id=mainWrapper>
+        <div class="wrap">
+            <pre><code>
+let text = `scrolltext `;
+let wrapper = document.querySelector(".wrapper");
+let tx, ty, midY;
+midY = ty / 2 - wrapper.getBoundingClientRect().y;
+tx = window.innerWidth;
+ty = window.innerHeight;
+let char = Math.floor(tx / 100 * 80 / 12);
+let lines = Math.ceil(text.length / char);
+
+for (i = 0; i < lines; i++) {
+  if (text.length > char) {
+    document.getElementById("text").innerHTML +=
+      "<div id=" + i + "text>" + text.slice(0, char) + "<div>";
+    text = text.slice(char, text.length);
+  } else {
+    document.getElementById("text").innerHTML +=
+      "<div id=" + i + "text>" + text + "<div>";
+  }
+}
+
+function positions() {
+  midY = ty / 2 - wrapper.getBoundingClientRect().y;
+  for (i = 0; i < lines; i++) {
+    let ids = document.getElementById(i + "text");
+    if (
+      ids.getBoundingClientRect().y <
+        midY + 40 + wrapper.getBoundingClientRect().y &&
+      ids.getBoundingClientRect().y >
+        midY - 40 + wrapper.getBoundingClientRect().y
+    ) {
+      //ids.style.transition = "transform .2s";
+      ids.style.transformOrigin = "20% 50%";
+      ids.style.transform = "scale(1.1, 1.1)";
+      ids.style.lineHeight = "1.1em";
+      ids.style.color = "#ccc";
+      ids.className += "text"; 
+      if (
+        ids.getBoundingClientRect().y <
+          midY + 20 + wrapper.getBoundingClientRect().y &&
+        ids.getBoundingClientRect().y >
+          midY - 20 + wrapper.getBoundingClientRect().y
+      ) {
+        ids.style.transform = "scale(1.2, 1.2)";
+        ids.style.lineHeight = "1.2em";
+        ids.style.color = "#eee";
+        if (
+          ids.getBoundingClientRect().y <
+            midY + 10 + wrapper.getBoundingClientRect().y &&
+          ids.getBoundingClientRect().y >
+            midY - 10 + wrapper.getBoundingClientRect().y
+        ) {
+          ids.style.transform = "scale(1.25, 1.25)";
+          ids.style.lineHeight = "1.3em";
+          ids.style.color = "#fff";
+        }
+      }
+    } else {
+      ids.style.transform = "scale(1, 1)";
+      ids.style.lineHeight = "1em";
+      ids.style.color = "#aaa";
+    }
+  }
+}
+
+addEventListener("scroll", positions);
+window.addEventListener("load", positions);
+                    
+            </code></pre>
+
+        </div>
+    </div>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

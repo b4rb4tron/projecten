@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snippets</title>
+    <link rel="shortcut icon" href="../../../../images/p.png" type="image/png">
+    <link rel="stylesheet" href="../../../../styles/screen.css">
+    <link rel="stylesheet" type="text/css" href="../../../snippets.css">
+    <link rel="stylesheet" href="../../../hightlight.min.css">
+    <script src="../../../highlight.min.js"></script>
+</head>
+
+<body>
+    <div id=mainWrapper>
+        <div class="wrap">
+            <pre><code>
+var c = document.getElementById('canvas').getContext('2d'); 
+c.canvas.width  = window.innerWidth;
+c.canvas.height = window.innerHeight;
+var w = c.canvas.width;
+var h = c.canvas.height;
+var size = Math.floor(Math.random() *100+50);
+var margew = (w % (size+10))/2
+var margeh = (h % (size+10))/2
+var nr1 = (size/2)-5;
+var nr2 = (size/2)-(size/3);
+var nr3 = (size/2)+(size/3-10);
+function dSteen(){
+    
+    function blokje(x, y,wi) {
+        c.fillStyle = "black";
+        c.fillRect(x, y, wi, wi);
+    }
+    var rnd = Math.floor(Math.random() *6+1);
+    c.lineWidth = 6;
+    c.fillStyle = "orange";
+    c.fillRect(0,0,size,size);
+    c.strokeRect(0,0,size,size);
+    if (rnd % 2 == 1){
+        blokje(nr1,nr1,10);
+    }
+    if (rnd >= 2){
+        blokje(nr2,nr2,10);
+        blokje(nr3,nr3,10);
+    }
+    if (rnd >= 4){
+        blokje(nr3,nr2,10);
+        blokje(nr2,nr3,10);
+    }
+    if (rnd > 5){
+        blokje(nr2,nr1,10);
+        blokje(nr3,nr1,10);
+
+    }   
+}
+function draw(){
+  c.clearRect(0,0,w,h);
+
+for ( j=0; j < (h-(size+10))/(size+10); j++){
+    c.save();
+    c.translate(0,j*(size+10));
+    for (i=0; i < w-(size+10); i+=(size+10)){ 
+        c.save();
+        c.translate(i,0);
+        dSteen();
+        c.restore();
+    }
+    c.restore();
+}
+}
+c.translate(margew,margeh);
+draw();
+setInterval(draw, 1000);
+//document.addEventListener("mouseup", draw);
+                    
+            </code></pre>
+
+        </div>
+    </div>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
