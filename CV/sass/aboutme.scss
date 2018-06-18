@@ -1,0 +1,86 @@
+
+@import "compass/css3";
+@import "vars";
+
+@media all and (min-width: 800px){
+#megrid{
+    display: grid;
+    justify-content: space-evenly;
+    grid-gap: 10px;
+    align-content: center;
+    grid-row: 300px 300px 300px;
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". hi hi"
+    "katten oki bunny" 
+    "me me .";
+}
+}
+@media all and (min-width: 500px) and (max-width: 800px){
+    #megrid{
+        display: grid;
+        //justify-content: space-evenly;
+        grid-gap: 10px;
+        align-content: center;
+        //grid-row: 300px 300px 300px;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+        "hi hi"
+        "oki bunny"
+        "katten ." 
+        "me me";
+    }
+    }
+    
+    @media all and (max-width: 500px){
+        #megrid{
+            display: grid;
+            justify-content: space-evenly;
+            grid-gap: 10px;
+            align-content: center;
+            //grid-row: 300px 300px 300px;
+            grid-column: 1fr 1fr 1fr;
+            grid-template-areas:
+            "hi"
+            "katten" 
+            "oki" 
+            "me" 
+            "bunny";
+        }
+        }
+        
+#me{
+    grid-area: me;
+
+}
+.roundimg{
+    border-style: solid;
+    border-radius: 50%;
+    border-color: black;
+    //height: 200px;
+    //width: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+#hi{
+    grid-area: hi;
+}
+#oki{
+    grid-area: oki;
+    text-align: center;
+    vertical-align: middle;
+}
+#bunnys{
+    grid-area: bunny;
+    text-align: center;
+    vertical-align: middle;
+}
+#katten{
+    grid-area: katten;
+    text-align: center;
+    vertical-align: middle;
+}
+img{
+    //float: right;
+    vertical-align: middle;
+}

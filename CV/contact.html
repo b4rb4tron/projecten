@@ -20,6 +20,7 @@
             send.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     tg(`submit`).innerHTML= `thank you`;
+                    tg(`bericht`).value= `Thank you for your message. I'll reply to you soon!`;
                     
                 
                 }
@@ -28,7 +29,7 @@
               send.send(formdata);
               return false;
                 ">
-            <h3>Naam</h3>
+            <h3>Name</h3>
             <input type="text" name="naam" id="naam" required />
 
             <div>
@@ -39,7 +40,7 @@
 
 
             <div>
-                <h3>Bericht</h3>
+                <h3>Message</h3>
                 <textarea name="bericht" rows="10" id=bericht required></textarea>
 
             </div>
