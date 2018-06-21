@@ -1,19 +1,18 @@
 @media all and (min-width: 800px) {
   #megrid {
     display: grid;
-    justify-content: space-evenly;
+    justify-content: space-around;
     grid-gap: 10px;
     align-content: center;
-    grid-row: 300px 300px 300px;
     grid-column: 1fr 1fr 1fr;
-    grid-template-areas: ". hi hi" "katten oki bunny"  "me me ."; } }
+    grid-template-areas: "ikke hi hi" "findme findme findme"  " me me ruth" "oki katten bunny" "text text text"; } }
 @media all and (min-width: 500px) and (max-width: 800px) {
   #megrid {
     display: grid;
     grid-gap: 10px;
     align-content: center;
     grid-column: 1fr 1fr;
-    grid-template-areas: "hi hi" "oki bunny" "katten ."  "me me"; } }
+    grid-template-areas: "hi ikke" "oki bunny" "katten ."  "ruth me" "findme findme" "text text"; } }
 @media all and (max-width: 500px) {
   #megrid {
     display: grid;
@@ -21,7 +20,7 @@
     grid-gap: 10px;
     align-content: center;
     grid-column: 1fr 1fr 1fr;
-    grid-template-areas: "hi" "katten"  "oki"  "me"  "bunny"; } }
+    grid-template-areas: "hi" "katten"  "oki"  "me"  "bunny" "findme" "ruth" "ikke" "text"; } }
 #me {
   grid-area: me; }
 
@@ -38,17 +37,67 @@
 #oki {
   grid-area: oki;
   text-align: center;
+  align-self: center;
   vertical-align: middle; }
 
 #bunnys {
   grid-area: bunny;
+  align-self: center;
   text-align: center;
   vertical-align: middle; }
 
 #katten {
   grid-area: katten;
   text-align: center;
+  align-self: center;
+  vertical-align: middle; }
+
+#ruth {
+  grid-area: ruth;
+  text-align: center;
+  align-self: center;
+  vertical-align: middle; }
+
+#ikke {
+  grid-area: ikke;
+  text-align: center;
+  align-self: center;
   vertical-align: middle; }
 
 img {
   vertical-align: middle; }
+
+#text {
+  grid-area: text; }
+
+.icons {
+  color: white; }
+
+#findme {
+  grid-area: findme; }
+  #findme ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center; }
+    #findme ul li {
+      text-align: center;
+      line-height: 30px;
+      vertical-align: middle;
+      width: 150px;
+      height: 40px;
+      display: inline-block;
+      margin: 0px;
+      padding: 0px; }
+      #findme ul li a {
+        width: 120px;
+        height: 30px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #0b5f7b;
+        transition: background-color, .2s; }
+      #findme ul li a:hover {
+        background-color: #1084a9; }
