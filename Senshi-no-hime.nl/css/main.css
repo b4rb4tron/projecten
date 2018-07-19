@@ -3,7 +3,10 @@
 .Siema1, .Siema2{
   width: 100%;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+ }
+ .Siema1{
+   margin-bottom: 0px;
  }
   .left{
     margin-bottom: 20px;
@@ -294,8 +297,8 @@ p{
   margin-top: -50px;
 }
 #nieuws{
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 0vh;
 }
 .date{
   font-weight: 100;
@@ -304,4 +307,9 @@ p{
   padding-top: 10vh;
   padding-bottom: 10vh;
 
+}
+a{
+  text-decoration-line: none;
+  color: #777;
+  font-weight: 500;
 }
