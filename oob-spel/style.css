@@ -1,0 +1,53 @@
+html {
+    font-family: arial;
+}
+body {
+    margin:0;
+    background-color: rgb(10, 22, 128);
+}
+canvas{
+    margin-top: 5%;
+    margin-left: 10%;
+    cursor: none;
+    background-color: rgb(49, 110, 138);
+   
+}
+.score {
+    border-color: blue;
+    border-style: dashed;
+    border-width: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    height: 18px;
+    background-color: rgb(95, 93, 192);
+    position: fixed;
+    top: 5px;
+    left: 10px;
+}
+.startbox{
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    height:200px;
+    width:350px;
+    text-align: center;
+    background-color: #68e9;
+    border-radius: 10px;
+}
+.button {
+    background-color: #68e9;
+    border-style: dashed;
+    margin-top: 70px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: rgb(14, 49, 224);
+}
+.button:active {
+    background-color: azure;
+}
