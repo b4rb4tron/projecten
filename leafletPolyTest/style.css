@@ -1,0 +1,17 @@
+html, body{
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+.box{
+    align-content: center;
+    width: 100%;
+}
+#mapDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    height: 360px;
+    background-color: #fff;
+
+}
